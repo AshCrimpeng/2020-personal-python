@@ -57,10 +57,11 @@ if __name__=="__main__":
             reponame = opt[1]
         elif opt[0] == '-e' or opt[0] == '--event':
             eventname = opt[1]
-    if reponame == "" or username == "":
+    if reponame or username :
+        count_3(data_s,username,reponame,eventname)
+    else:
         if username == "":
             count_2(data_s,reponame,eventname) 
         else:
             count_1(data_s,username,eventname)
-    else:
-        count_3(data_s,username,reponame,eventname)
+        
